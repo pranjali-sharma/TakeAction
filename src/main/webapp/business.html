@@ -1,3 +1,32 @@
+<!DOCTYPE html>
 <html>
-Business page
+    <head>
+        <meta charset="UTF-8">
+        <title>Business Page</title>
+        <script src="script.js"></script>
+    </head>
+    <body onload="initMap()">
+        <div> 
+            Black-Owned Businesses in Minneapolis 
+            <ul>
+                <li>Afro Deli- 720 Washington Ave SE</li>
+                <li>Dragon Wok- 805 E 38th St</li>
+                <li>Queen Anna House of Fashion- 109 N 2nd St</li>
+                <li>New Dawn Theatre Company- 2500 Crosby Farm Rd</li>
+            </ul>
+        </div>
+        <div> 
+            Online Black-Owned Businesses
+            <ul>
+                <li><a href="https://www.beautybakerie.com/">Beauty Bakerie</a></li>
+                <li><a href="https://blkandbold.com/">BLK and Bold</a></li>
+                <li><a href="https://shop.adornedbychi.com/">Adorned by Chi</a></li>
+                <li><a href="https://formbeauty.com/">Form Beauty</a></li>
+            </ul>
+        </div>
+        <div>
+            <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCyj9vCNRSSGyuMpsk3j9hVQ7Okos7n8CM&callback=initMap"type="text/javascript"></script>
+            <div id="map" style="width:500px; height:400px;"></div>
+        </div>
+    </body>
 </html>
