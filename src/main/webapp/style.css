@@ -81,6 +81,13 @@ nav a:hover {
   color: #fff;
 }
 
+.title {
+    font-weight:bold;
+}
+
+.bold {
+    font-weight: 500;
+}
 
 
 
