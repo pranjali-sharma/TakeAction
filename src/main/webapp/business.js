@@ -1,4 +1,4 @@
-//implementing map
+// implementing map
 var map;
 function initMap(latitude, longitude, name) {
     const map = new google.maps.Map(
@@ -38,5 +38,5 @@ function getInfo() {
             onlineList.appendChild(listItem);
         }
       } 
-     });
+   });
 }
