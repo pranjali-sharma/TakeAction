@@ -1,12 +1,12 @@
-// Java code to illustrate reading a 
-// CSV file line by line 
+// Java code to illustrate reading a
+// CSV file line by line
 
 package com.google.sps.servlets;
 
 import com.google.gson.Gson;
-import java.io.IOException;
-import java.io.FileReader;
 import com.opencsv.*;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import javax.servlet.annotation.WebServlet;
@@ -18,45 +18,60 @@ import javax.servlet.http.HttpServletResponse;
 public class DonationsServlet extends HttpServlet {
   @Override
   public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-      String file="/home/ps3072/software-product-sprint/project/src/main/webapp/charities.csv";
-      String org= csvToJson(file);
-      response.setContentType("application/json;");
-      response.getWriter().println(org);
+    String file = "/home/ps3072/software-product-sprint/project/src/main/webapp/charities.csv";
+    String org = csvToJson(file);
+    response.setContentType("application/json;");
+    response.getWriter().println(org);
   }
 
-private String csvToJson(String file) 
-{ //return json of all rows
-    List<String[]> json= new ArrayList<String[]>();
-	try { 
+  private String csvToJson(String file) { // return json of all rows
 
-		// Create an object of filereader 
-		// class with CSV file as a parameter. 
-		FileReader filereader = new FileReader(file); 
-		// create csvReader object passing 
-		// file reader as a parameter 
-		CSVReader csvReader = new CSVReader(filereader); 
-		String[] nextRecord; 
+    String json = "{ \"charities\": [";
+    try {
+      // Create an object of filereader
+      // class with CSV file as a parameter.
+      FileReader filereader = new FileReader(file);
+      // create csvReader object passing
+      // file reader as a parameter
+      CSVReader csvReader = new CSVReader(filereader);
+      String[] nextRecord;
+      String col0 = "id";
+      String col1 = "name";
+      String col2 = "link";
+      String col3 = "blurb";
 
-		// we are going to read data line by line 
-		while ((nextRecord = csvReader.readNext()) != null) { 
-			for (String cell : nextRecord) { 
-				System.out.print(cell + "\t");                  
-			} 
-            json.add(nextRecord);
-			System.out.println(); 
-		} 
-	} 
-	catch (Exception e) { 
-		e.printStackTrace(); 
-	} 
-
-    return convertToJson(json);
-} 
-
-private String convertToJson(List<String[]> toBeConverted) {
-    Gson gson = new Gson();
-    String json = gson.toJson(toBeConverted);
-    System.out.println("convertToJson(): json= "+json);
+      // we are going to read data line by line
+      while ((nextRecord = csvReader.readNext()) != null) {
+        String row = "{";
+        int ctr = 0;
+        for (String cell : nextRecord) {
+          switch (ctr) {
+            case 0:
+              row += "\"" + col0 + "\": ";
+              break;
+            case 1:
+              row += "\"" + col1 + "\": ";
+              break;
+            case 2:
+              row += "\"" + col2 + "\": ";
+              break;
+            case 3:
+              row += "\"" + col3 + "\": ";
+              break;
+            default:
+              break;
+          }
+          row += "\"" + cell + "\", ";
+          ctr++;
+        }
+        row = row.substring(0, row.length() - 2);
+        json += row + "},";
+      }
+    } catch (Exception e) {
+      e.printStackTrace();
+    }
+    json = json.substring(0, json.length() - 1);
+    json += "]}";
     return json;
   }
 }
