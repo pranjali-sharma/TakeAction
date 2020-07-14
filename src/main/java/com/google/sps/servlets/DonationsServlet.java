@@ -18,7 +18,7 @@ import javax.servlet.http.HttpServletResponse;
 public class DonationsServlet extends HttpServlet {
   @Override
   public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-    String file = "/home/ps3072/software-product-sprint/project/src/main/webapp/charities.csv";
+    String file = "./CSV/charities.csv";
     String org = csvToJson(file);
     response.setContentType("application/json;");
     response.getWriter().println(org);
@@ -74,4 +74,5 @@ public class DonationsServlet extends HttpServlet {
     json += "]}";
     return json;
   }
+
 }

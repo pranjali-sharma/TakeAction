@@ -1,6 +1,9 @@
 function getOrgs() {
   fetch('/donations').then(response => response.json()).then((json) => {
+    console.log(json);
     const charities = json.charities;
+    console.log(charities);
+    
     for (let i = 1; i < charities.length; i++) {
         var id= charities[i].id;
         var name= charities[i].name;
