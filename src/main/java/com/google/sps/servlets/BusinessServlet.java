@@ -1,7 +1,6 @@
 package com.google.sps.servlets;
 
 import com.google.gson.Gson;
-// import com.opencsv.*;
 import com.opencsv.CSVReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -23,7 +22,7 @@ public class BusinessServlet extends HttpServlet {
   }
 
   // from https://www.geeksforgeeks.org/reading-csv-file-java-using-opencsv/
-  //changes csv to json for all rows
+  // changes csv to json for all rows
   private String csvToJson(String file) { // return json of all rows
     List<String[]> json = new ArrayList<String[]>();
     try {

@@ -1,27 +1,25 @@
-Business name,Business type,Business address,On map,Lat,Long
-Afro Deli,in-person,720 Washington Ave SE,TRUE,44.974,-93.2277
-Dragon Wok,in-person,805 E 38th St,FALSE,,
-Beauty Bakerie,online,https://www.beautybakerie.com/,FALSE,,
-Queen Anna House of Fashion,in-person,109 N 2nd St,FALSE,,
-New Dawn Theatre Company,in-person,2500 Crobsy Farm Rd,FALSE,,
-BLK and Bold,online,https://blkandbold.com/,FALSE,,
-Adorned by Chi,online,https://shop.adornedbychi.com/,FALSE,,
-Form Beauty,online,https://formbeauty.com/,FALSE,,
-Soul Bowl,in-person,520 N 4th St,FALSE,,
-Trio Plant-based,in-person,610 W Lake St,FALSE,,
-The Red Sea,in-person,320 Cedar Ave South,FALSE,,
-The Nail Bar,in-person,3501 Hennepin Ave,FALSE,,
-The Beauty Lounge,in-person,3501 Hennepin Ave S,FALSE,,
-Brian Graham Salon,in-person,220 N Washington Ave,FALSE,,
-Captain Rebel,in-person,904 1/2 W Lake St,FALSE,,
-Elsa's House of Sleep,in-person,3540 E Lake St,FALSE,,
-Lions Gym and Wellness Center,in-person,4123 W Broadway Ave,FALSE,,
-We Buy Black,online,https://webuyblack.com/,FALSE,,
-Black Girl Sunscreen,online,https://www.blackgirlsunscreen.com/,FALSE,,
-Golde,online,https://golde.co/,FALSE,,
-Mented Cosmetics,online,https://www.mentedcosmetics.com/,FALSE,,
-The Bark Shoppe,online,https://www.thebarkshoppe.com/,FALSE,,
-PUR Home,online,https://pur-home.com/,FALSE,,
-Kara Hinson Art,online,https://www.karahinson.com/,FALSE,,
-Crown Candle Co,online,https://www.crowncandleco.com/,FALSE,,
-Bole Road Textiles,online,https://boleroadtextiles.com/,FALSE,,
+Business name,Business type,Business address,On map,Lat,Long,Description
+Afro Deli,in-person,720 Washington Ave SE,TRUE,44.974,-93.2277,"Afro Deli is an urban fast-casual restaurant that provides a delicious fusion of African, Mediterranean, and American themed food in a fast, fun, and friendly environment."
+Dragon Wok,in-person,805 E 38th St,TRUE,44.93404,-93.26219,"Located In Minneapolis Powderhorn Neighborhood, Dragon Wok is the first-of-its-kind, premium Asian food dine in, take out and delivery."
+Beauty Bakerie,online,https://www.beautybakerie.com/,FALSE,,,
+Queen Anna House of Fashion,in-person,109 N 2nd St,TRUE,44.98406,-93.26953,Sophisticated And Refined Collection For Women.
+BLK and Bold,online,https://blkandbold.com/,FALSE,,,
+Adorned by Chi,online,https://shop.adornedbychi.com/,FALSE,,,
+Form Beauty,online,https://formbeauty.com/,FALSE,,,
+Soul Bowl,in-person,520 N 4th St,TRUE,44.98501,-93.27765,Soul Food Reimagined.
+Trio Plant-based,in-person,610 W Lake St,TRUE,44.94841,-93.28697,100% plant-based soul food.
+The Red Sea,in-person,320 Cedar Ave South,TRUE,44.970664,-93.247468,Minneapolis' first Ethopian restaurant.
+The Nail Bar,in-person,3501 Hennepin Ave,TRUE,44.93941,-93.298114,The Nail Bar is full service nail salon that is joining the beauty industy with an in-service salon concept supplying the ultimate convenience.
+The Beauty Lounge,in-person,3501 Hennepin Ave,TRUE,44.93941,-93.298114,"Multicultural hair salon located in Uptown Minneapolis. Specializing in hair color, curly hair cutting, blowouts, natural hair styling, locs, and silk presses."
+Brian Graham Salon,in-person,220 N Washington Ave,TRUE,44.984375,-93.271948,We aim to deliver the confident feeling you get when you look and feel your best.
+Captain Rebel,in-person,904 1/2 W Lake St,TRUE,44.948512,-93.291036,Street-wear brand.
+Elsa's House of Sleep,in-person,3540 E Lake St,TRUE,44.94858,-93.22056,"Elsa's House of Sleep Inc is a family owned Furniture, Mattress, Dining Room, Living Room, and Bedroom store."
+Lions Gym and Wellness Center,in-person,4123 W Broadway Ave,TRUE,44.998953,-93.279252,"More than your average health club, Lions Gym & Wellness Center of Robbinsdale offers a wide range of goal-oriented, science-fueled health and wellness services for those in pursuit of their full potential through functional fitness."
+We Buy Black,online,https://webuyblack.com/,FALSE,,,
+Black Girl Sunscreen,online,https://www.blackgirlsunscreen.com/,FALSE,,,
+Golde,online,https://golde.co/,FALSE,,,
+Mented Cosmetics,online,https://www.mentedcosmetics.com/,FALSE,,,
+The Bark Shoppe,online,https://www.thebarkshoppe.com/,FALSE,,,
+PUR Home,online,https://pur-home.com/,FALSE,,,
+Kara Hinson Art,online,https://www.karahinson.com/,FALSE,,,
+Crown Candle Co,online,https://www.crowncandleco.com/,FALSE,,,
