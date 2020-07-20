@@ -16,7 +16,7 @@ public class BusinessServlet extends HttpServlet {
   @Override
   public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
     String bus =
-        csvToJson("/home/skolb/software-product-sprint/team13/src/main/webapp/businesses.csv");
+        csvToJson("businesses.csv");
     response.setContentType("application/json;");
     response.getWriter().println(bus);
   }
