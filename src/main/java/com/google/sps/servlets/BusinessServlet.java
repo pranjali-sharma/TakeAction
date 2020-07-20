@@ -15,8 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 public class BusinessServlet extends HttpServlet {
   @Override
   public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-    String bus =
-        csvToJson("businesses.csv");
+    String bus = csvToJson("businesses.csv");
     response.setContentType("application/json;");
     response.getWriter().println(bus);
   }

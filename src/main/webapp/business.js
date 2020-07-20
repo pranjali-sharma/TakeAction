@@ -1,4 +1,4 @@
-//consts
+// consts
 const BUSINESS_NAME = 0;
 const BUSINESS_TYPE = 1;
 const BUSINESS_ADDR = 2;
@@ -7,7 +7,7 @@ const CSV_LATITUDE = 4;
 const CSV_LONGITUDE = 5;
 const CSV_DESCRIPTION = 6;
 
-//gets information for webpage, list of in-person and online businesses
+// gets information for webpage, list of in-person and online businesses
 function getInfo() {
   fetch('/business').then(response => response.json()).then((json) => {
     var counter = 0;
@@ -31,29 +31,29 @@ function getInfo() {
   });
 }
 
-//creates and adds in-person businesses to DOM
+// creates and adds in-person businesses to DOM
 function renderInPersonBlock(json, i) {
-    var inPersonList = document.getElementById('inpersonbus');
-    var listItem = document.createElement('button');
-    var innerText = json[i][BUSINESS_NAME];
-    listItem.type = 'button';
-    listItem.className = 'list-group-item list-group-item-action';
-    listItem.innerHTML = innerText;
-    listItem.addEventListener('click', function() {
-        if (json[this][ON_MAP_BOOL] == 'TRUE') {
-        document.getElementById('busname').innerHTML = json[this][BUSINESS_NAME];
-        document.getElementById('busaddr').innerHTML = json[this][BUSINESS_ADDR];
-        document.getElementById('busdes').innerHTML = json[this][CSV_DESCRIPTION];
-        var latitude = parseFloat(json[this][CSV_LATITUDE]);
-        var longitude = parseFloat(json[this][CSV_LONGITUDE]);
-        var mapDiv = document.getElementById('mapdiv');
-        initMap(latitude, longitude, json[this][BUSINESS_NAME]);
-        }
-    }.bind(i));
-    inPersonList.appendChild(listItem);
+  var inPersonList = document.getElementById('inpersonbus');
+  var listItem = document.createElement('button');
+  var innerText = json[i][BUSINESS_NAME];
+  listItem.type = 'button';
+  listItem.className = 'list-group-item list-group-item-action';
+  listItem.innerHTML = innerText;
+  listItem.addEventListener('click', function() {
+    if (json[this][ON_MAP_BOOL] == 'TRUE') {
+      document.getElementById('busname').innerHTML = json[this][BUSINESS_NAME];
+      document.getElementById('busaddr').innerHTML = json[this][BUSINESS_ADDR];
+      document.getElementById('busdes').innerHTML = json[this][CSV_DESCRIPTION];
+      var latitude = parseFloat(json[this][CSV_LATITUDE]);
+      var longitude = parseFloat(json[this][CSV_LONGITUDE]);
+      var mapDiv = document.getElementById('mapdiv');
+      initMap(latitude, longitude, json[this][BUSINESS_NAME]);
+    }
+  }.bind(i));
+  inPersonList.appendChild(listItem);
 }
 
-//creates each card for online businesses
+// creates each card for online businesses
 function createCard(i, col, json) {
   var businessCard = document.createElement('div');
   businessCard.className = 'card';
@@ -72,7 +72,7 @@ function createCard(i, col, json) {
   col.appendChild(businessCard);
 }
 
-//creates map
+// creates map
 var map;
 function initMap(latitude, longitude, name) {
   const map = new google.maps.Map(
