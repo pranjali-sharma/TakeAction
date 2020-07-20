@@ -43,3 +43,7 @@ handlers:
   script: unused
   login: optional
   secure: optional
+- url: /business
+  script: unused
+  login: optional
+  secure: optional
