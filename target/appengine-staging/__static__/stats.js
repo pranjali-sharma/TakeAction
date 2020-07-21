@@ -18,8 +18,8 @@ function drawPopulationChart() {
 
     const options = {
         'title': 'Racial Demographic of US Population',
-        'width':500,
-        'height':400
+        'width':450,
+        'height':300
     };
 
     var chart = new google.visualization.PieChart(document.getElementById('population_chart'));
@@ -30,7 +30,7 @@ function drawStatsChart() {
 
     var data = new google.visualization.DataTable();
     data.addColumn('string', 'Race');
-    data.addColumn('number', 'Death per million');
+    data.addColumn('number', 'Deaths per million');
     data.addRows([
         ['Black', 31],
         ['Hispanic', 23],
@@ -39,8 +39,8 @@ function drawStatsChart() {
     ]);
 
     var options = {title:'Number of People Killed by Police since 2015',
-    width:400,
-    height:500};
+    width:500,
+    height:300};
 
     var chart = new google.visualization.ColumnChart(document.getElementById('stats_chart'));
     chart.draw(data, options);
