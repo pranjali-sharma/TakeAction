@@ -6,8 +6,21 @@
         <script src="business.js"></script>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     </head>
-    <!-- Nav bar goes here -->
     <body onload="getInfo()" method="GET">
+        <div id="nav-placeholder"></div>
+        <script src="//code.jquery.com/jquery.min.js"></script>
+        <script>
+            $.get("nav.html", function(data){
+            $("#nav-placeholder").replaceWith(data);
+            });
+        </script>
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        
         <div class="container">
             <h1>Black-Owned Businesses in Minneapolis</h1>
             <br>
